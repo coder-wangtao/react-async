@@ -8,7 +8,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import RequiredAuth from "./auth/RequiredAuth";
-
+ 
 import LoginPage from "./pages/LoginPage";
 import UserPage from "./pages/UserPage";
 

@@ -1,3 +1,4 @@
+//搞定
 import effectTypes from "./effectTypes";
 import { IO } from "./symbol";
 
@@ -10,6 +11,7 @@ function makeEffect(type, payload) {
 }
 
 export function take(pattern) {
+  //take这个方法，是用来监听action，返回的是监听到的action对象。
   return makeEffect(effectTypes.TAKE, { pattern });
 }
 

@@ -12,7 +12,8 @@ export default function UserPage(props) {
       <p>{user?.userInfo?.score}</p>
       <button
         onClick={() => {
-          dispatch(logout());
+          const res = logout();
+          dispatch(res);
         }}
       >
         logout

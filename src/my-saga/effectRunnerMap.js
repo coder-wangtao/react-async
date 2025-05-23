@@ -4,12 +4,12 @@ import proc from "./proc";
 
 // todo channel
 function runTakeEffect(env, { channel = env.channel, pattern }, cb) {
-  const matcher = (input) => input.type === pattern;
+  const matcher = (input) => input.type === pattern; //OK
   channel.take(cb, matcher);
 }
 
 function runPutEffect(env, { action }, cb) {
-  const result = env.dispatch(action);
+  const result = env.dispatch(action); //redux dispatch   //OK
   cb(result);
 }
 

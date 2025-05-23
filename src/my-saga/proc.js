@@ -18,6 +18,7 @@ export default function proc(env, iterator) {
     }
   }
 
+  //digestEffect
   function digestEffect(effect, cb) {
     let effectSettled;
     function currentCb(res, isErr) {

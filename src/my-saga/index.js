@@ -4,12 +4,11 @@ import runSaga from "./runSaga.js";
 export default function createSagaMiddleware() {
   let boundRunSaga;
 
-  let channel = stdChannel();
+  let channel = stdChannel(); //返回{take, put}
 
   // redux-thunk logger promise
   function sagaMiddleware({ getState, dispatch }) {
     boundRunSaga = runSaga.bind(null, { channel, getState, dispatch });
-
     return (next) => (action) => {
       let result = next(action);
       channel.put(action);

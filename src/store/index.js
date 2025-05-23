@@ -1,10 +1,10 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import { thunk } from "redux-thunk";
+// import { thunk } from "redux-thunk";
 // import createSagaMiddleware from "redux-saga";
 import createSagaMiddleware from "../my-saga";
 
 // !1. 创建要运行的saga
-import loginSaga from "../action/loginSaga";
+// import loginSaga from "../action/loginSaga";
 import { loginReducer } from "./loginReducer";
 import rootSaga from "../action/rootSaga";
 
